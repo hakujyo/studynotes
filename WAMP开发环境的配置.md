@@ -86,24 +86,27 @@ PhpMyAdmin的下载地址：https://www.phpmyadmin.net/downloads/
 
 打开 libraries 目录下的 config.default.php 文件，配置：
 
-配置访问网址：$cfg[‘PmaAbsoluteUri’] = ‘http://localhost/phpMyAdmin/’;，路径也可以是别的。
+配置访问网址：
+> $cfg[‘PmaAbsoluteUri’] = ‘http://localhost/phpMyAdmin/’;
+路径也可以是别的。
 
 MySQL主机信息：
 
-$cfg[‘Servers’][$i][‘host’] = ‘localhost’;，填写 localhost  或 MySQL  所在服务器的 ip 地址，如果 MySQL 和该 phpMyAdmin 在同一服务器，则按默认 localhost
-
-$cfg[‘Servers’][$i][‘socket’] = ‘3306’;，MySQL 端口，默认为 3306，保留为空即可，如果安装 MySQL 时使用了其它的端口，需要在这里填写。
+> $cfg[‘Servers’][$i][‘host’] = ‘localhost’;
+填写 localhost  或 MySQL  所在服务器的 ip 地址，如果 MySQL 和该 phpMyAdmin 在同一服务器，则按默认 localhost
+> $cfg[‘Servers’][$i][‘socket’] = ‘3306’;
+MySQL 端口，默认为 3306，保留为空即可，如果安装 MySQL 时使用了其它的端口，需要在这里填写。
 
 MySQL用户名和密码
 > $cfg[‘Servers’][$i][‘user’] = ‘root’;
 > $cfg[‘Servers’][$i][‘password’] = ‘123456’;
 
 认证方法
-
 > $cfg[‘Servers’][$i][‘auth_type’] = ‘cookie’
 
 短语密码（blowfish_secret）的设置
+> $cfg[‘blowfish_secret’] = ”;
 
-$cfg[‘blowfish_secret’] = ”;如果认证方法设置为 cookie，就需要设置短语密码，设置为什么密码，由您自己决定，这里不能留空，否则会在登录 phpMyAdmin 时提示的错误。
+如果认证方法设置为 cookie，就需要设置短语密码，设置为什么密码，由您自己决定，这里不能留空，否则会在登录 phpMyAdmin 时提示的错误。
 
 测试：浏览器打开localhost/phpmyadmin，出现phpmyadmin的主页，则配置成。

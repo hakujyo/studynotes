@@ -1,7 +1,6 @@
-## 0x01下载MinGW的安装文件http://sourceforge.net/projects/mingw/files/latest/download?source=files
-
+## 0x01下载MinGW的安装文件
+http://sourceforge.net/projects/mingw/files/latest/download?source=files
 安装需要科学上网注意，c++的话组件选gcc。
-
 
 ## 0x02配置环境变量
 
@@ -11,10 +10,7 @@ lib 添加 C:\MinGW\lib;
 
 ## 0x03用g++编译
 
-写一个小程序，比如helloworld：
-
-写一个helloworld
-写一个helloworld
+写一个小程序，比如helloworld.
 学一些gcc的基本用法：
 命令格式：gcc [选项] [文件名]
 编译的四个阶段：

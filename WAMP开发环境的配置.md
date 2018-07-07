@@ -1,8 +1,6 @@
 ## 0x00 引言
 
 以前玩过集成php开发环境，phpstudy，wampServer什么的，但是傻瓜式的集成包让我有种无法掌控个人电脑的不安全感。。。所以还是推荐手工搭建PHP开发环境。=。=
-
-
 顾名思义，wamp，windows+apache+mysql+php。
 
 ## 0x01 Apache http server的编译安装
@@ -39,36 +37,32 @@ Errors reported here must be corrected before the service can be started.
 
 （apache是Apache服务器的服务名）
 
-0x02 Php的安装配置
+## 0x02 Php的安装配置
 
 Php的下载地址：http://php.net/downloads.php
 
 php解压后需要跟apache做一些绑定，用记事本打开apache的httpd.conf文件。
 
 在文件最后添加：
-
-# php7 support
-LoadModule php7_module baseroot/php-7.1.7-Win32-VC14-x64/php7apache2_4.dll
-AddType application/x-httpd-php .php .html .htm
-# configure the path to php.iniPHPIniDir “D:/php”
-
+> ```php
+> # php7 support
+> LoadModule php7_module baseroot/php-7.1.7-Win32-VC14-x64/php7apache2_4.dll
+> AddType application/x-httpd-php .php .html .htm
+> # configure the path to php.iniPHPIniDir “D:/php”
+> ```
 将php.ini-development更改为php.ini文件，打开：
-
-date.timezone = Asia/Shanghai
-
-extension_dir = “ext”去掉分号,并改为ext的完整路径
-
-extension=php_mysqli.dll，extension=php_mbstring.dll去掉分号（这几步是为了之后配置phpmyadmin做准备）
-
+> date.timezone = Asia/Shanghai
+> extension_dir = “ext”去掉分号,并改为ext的完整路径
+> extension=php_mysqli.dll，extension=php_mbstring.dll去掉分号（这几步是为了之后配置phpmyadmin做准备）
 以上基本将配好了，测试一下，在baseroot\Apache\htdocs 文件夹下添加一个phpinfo.php文件，里面的内容设置为
-
-<?php
-phpinfo();
-?>
-
+> ```php
+> <?php
+> phpinfo();
+> ?>
+> ```
 重启apache http server，在浏览器中打开localhost:/phpinfo.php，出现php信息页面则php+Apache的环境就配置完成了。
 
-0x03 MySQL的安装配置
+## 0x03 MySQL的安装配置
 
 MySQL的下载地址：https://dev.mysql.com/downloads/windows/
 
@@ -84,7 +78,7 @@ php和mysql的版本要么全选x64，要么全选x86，最好不要混搭。
 
 mysql -uroot -p进入mysql
 
-0x04 PhpMyAdmin的安装配置
+## 0x04 PhpMyAdmin的安装配置
 
 PhpMyAdmin的下载地址：https://www.phpmyadmin.net/downloads/
 
@@ -101,12 +95,12 @@ $cfg[‘Servers’][$i][‘host’] = ‘localhost’;，填写 localhost  或 M
 $cfg[‘Servers’][$i][‘socket’] = ‘3306’;，MySQL 端口，默认为 3306，保留为空即可，如果安装 MySQL 时使用了其它的端口，需要在这里填写。
 
 MySQL用户名和密码
-$cfg[‘Servers’][$i][‘user’] = ‘root’;
-$cfg[‘Servers’][$i][‘password’] = ‘123456’;
+> $cfg[‘Servers’][$i][‘user’] = ‘root’;
+> $cfg[‘Servers’][$i][‘password’] = ‘123456’;
 
 认证方法
 
-$cfg[‘Servers’][$i][‘auth_type’] = ‘cookie’
+> $cfg[‘Servers’][$i][‘auth_type’] = ‘cookie’
 
 短语密码（blowfish_secret）的设置
 

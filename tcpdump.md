@@ -1,2 +1,2 @@
-![image][https://github.com/hakujyo/studynotes/blob/master/pictures/tcp_3_4.png]
+![image](https://github.com/hakujyo/studynotes/blob/master/pictures/tcp_3_4.png)
 your document here ...

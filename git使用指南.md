@@ -1,10 +1,18 @@
 # 创建版本库
+## 创建一个空目录
 > ``` git bash
 > $ mkdir learngit
 > $ cd learngit
 > $ pwd
 > /d/learngit
+> ```
+
+## 把这个目录变成Git可以管理的仓库
+> ``` git bash
 > $ git init 
+> Initialized empty Git repository in D:/learngit/.git/
+> $ ls -ah
+> ./  ../  .git/
 > ```
 
 要使用git工具，首先你需要一个服务器，一般为github，我们在上面建一个仓库

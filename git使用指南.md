@@ -121,6 +121,7 @@
 > ```
 
 # 远程仓库
+## 密钥
 1. 创建ssh key
 > ```shell
 > $ ssh-keygen -t rsa -C “your e-mail”
@@ -134,19 +135,27 @@
 > ```
 这样就能愉快的在g~~ay~~ithub里玩耍了！
 
-
-
-
-注意 这里如果是第一次提交，需要先设置本地仓库
-> ``` git bash
-> git remote add origin git@github.com/…blablabla
+## 添加远程仓库
+1. 在github上“Create a new repo”，并将本地库关联远程仓库
+> ```shell
+> $ git remote add origin git@github.com:hakujyo/learngit.git
 > ```
-上一步要注意的是不要选择https方式上传代码
 
-如果不幸选择了，可以remote，然后重新添加远程github仓库
+上一步要注意的是不要选择https方式上传代码，如果不幸选择了，可以remote，然后重新添加远程github仓库
 > ```shell
 > git remote rm origin            
 > ```
+
+把本地库的所有内容推送到远程库上（注意第一次一定要加-u）：
+> ```shell
+> $ git push -u origin master
+> ```
+
+## 小结
+> * 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+> * 关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+> * 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
 
 
 从github服务器下载代码

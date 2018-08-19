@@ -38,7 +38,6 @@
 >  create mode 100644 readme.txt
 > ```
 
-
 ### 修改readme，查看状态，会提示把改动添加到版本库或者丢弃
 > ``` git bash
 > $ git status
@@ -53,8 +52,8 @@
 > ```
 
 ### 对比上一个版本修改的内容
-$ git diff readme.txt
 > ``` git bash
+> $ git diff readme.txt
 > diff --git a/readme.txt b/readme.txt
 > index 46d49bf..9247db6 100644
 > --- a/readme.txt
@@ -64,6 +63,24 @@ $ git diff readme.txt
 > +Git is a distributed version control system.
 >  Git is free software.
 > ```
+
+### 查看所有日志
+> ``` git bash
+> $ git log
+> commit 9e51fdd8c92aa09bf8a9eaed2479f61f7591da22
+> Author: yoruneko <hakujyo0518@gmail.com>
+> Date:   Sun Aug 19 16:58:15 2018 +0800
+> 
+>     add distributed
+> 
+> commit 8e09117453ce6f62c2b1b79160681643b8af239b
+> Author: yoruneko <hakujyo0518@gmail.com>
+> Date:   Sun Aug 19 14:45:53 2018 +0800
+> 
+>     wrote a readme file
+> 
+> ```
+
 
 
 

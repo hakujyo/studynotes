@@ -81,6 +81,24 @@
 > 
 > ```
 
+### 回退到上一个版本
+> ``` git bash
+> git reset --hard HEAD^
+> ```
+
+### 重置到任一版本
+> ``` git bash
+> git reset --hard [commitid]
+> ```
+
+### 查看head指针历史记录
+> ``` git bash
+> $ git reflog
+> 8e09117 HEAD@{0}: reset: moving to HEAD^
+> 9e51fdd HEAD@{1}: commit: add distributed
+> 8e09117 HEAD@{2}: commit (initial): wrote a readme file
+> ```
+
 
 
 

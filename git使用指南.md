@@ -99,12 +99,19 @@
 > 8e09117 HEAD@{2}: commit (initial): wrote a readme file
 > ```
 
+### 让工作区文件回到最近一次git commit或git add时的状态
+> ``` git bash
+> $ git checkout -- [file]
+> ```
 
-
+### 让已经添加到暂存区的文件回到head指针指向的版本
+> ``` git bash
+> $ git reset HEAD [file]
+> ```
 
 ### 上传到github服务器
 > ``` git bash
-> git push -u origin master   
+> $ git push -u origin master   
 > ```
 
 

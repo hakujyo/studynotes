@@ -162,6 +162,70 @@
 > $ git clone git@server-name:path/repo-name.git
 > ```
 
+# 分支管理
+创建+切换分支
+> ```shell
+> $ git checkout -b dev
+> Switched to a new branch 'dev'
+> ```
+
+创建分支：
+> ```shell
+> $ git branch dev
+> ```
+
+切换分支：
+> ```shell
+> $ git checkout dev
+> ```
+
+查看当前分支
+> ```shell
+> $ git branch
+> ```
+
+合并指定分支到当前分支
+> ```shell
+> $ git merge [branchname]
+> ```
+
+删除分支
+> ```shell
+> $ git branch -d [branchname]
+> ```
+
+查看分支合并情况
+> ```shell
+> $ git log --graph --pretty=oneline --abbrev-commit
+> ```
+
+# bug分支
+对于已经add到暂存区的内容，又要临时用别的分支完成任务，可以先stash保护现场：
+> ```shell
+> $ git stash
+> ```
+
+查看工作现场
+> ```shell
+> $ git stash list
+> stash@{0}: WIP on dev: f52c633 add merge
+> ```
+
+等处理完毕，再切换到该分支，释放出来：
+> ```shell
+> $ git stash pop
+> ```
+
+这种方法约等于两个命令：
+> ```shell
+> $ git stash apply # 恢复工作区
+> $ git stash drop  # 删除该stash
+> ```
+
+小结
+> * 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+> * 当手头工没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
+
 
 从github服务器下载代码
 > ```shell

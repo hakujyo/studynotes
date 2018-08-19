@@ -1,3 +1,12 @@
+# 创建版本库
+> ``` git bash
+> $ mkdir learngit
+> $ cd learngit
+> $ pwd
+> /d/learngit
+> $ git init 
+> ```
+
 要使用git工具，首先你需要一个服务器，一般为github，我们在上面建一个仓库
 在本地建立git文件夹
 > ```shell

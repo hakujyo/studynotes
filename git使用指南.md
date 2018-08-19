@@ -37,10 +37,40 @@
 >  create mode 100644 readme.txt
 > ```
 
+
+## 修改readme，查看状态，会提示把改动添加到版本库或者丢弃
+> ``` git bash
+> $ git status
+> On branch master
+> Changes not staged for commit:
+>   (use "git add <file>..." to update what will be committed)
+>   (use "git checkout -- <file>..." to discard changes in working directory)
+> 
+>         modified:   readme.txt
+> 
+> no changes added to commit (use "git add" and/or "git commit -a")
+> ```
+
+## 对比上一个版本修改的内容
+$ git diff readme.txt
+> ``` git bash
+> diff --git a/readme.txt b/readme.txt
+> index 46d49bf..9247db6 100644
+> --- a/readme.txt
+> +++ b/readme.txt
+> @@ -1,2 +1,2 @@
+> -Git is a version control system.
+> +Git is a distributed version control system.
+>  Git is free software.
+> ```
+
+
+
 ## 上传到github服务器
 > ``` git bash
 > git push -u origin master   
 > ```
+
 
 注意 这里如果是第一次提交，需要先设置本地仓库
 > ``` git bash

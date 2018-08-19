@@ -1,4 +1,4 @@
-## 创建版本库
+# 创建版本库
 ### 创建一个空目录
 > ``` git bash
 > $ mkdir learngit
@@ -19,7 +19,7 @@
 > ./  ../  .git/
 > ```
 
-## 提交版本与版本回退
+# 提交版本与版本回退
 ### 将读我把添加到版本暂存区
 > ``` git bash
 > $ git add readme.txt
@@ -120,6 +120,22 @@
 > $ git commit -m "remove file"
 > ```
 
+# 远程仓库
+1. 创建ssh key
+> ```shell
+> $ ssh-keygen -t rsa -C “your e-mail”
+> ```
+这样密钥和公钥就产生啦，默认的钥匙位置在~/.ssh
+上面这步windows用户可能会出错，文件目录的锅，所以推荐还是在类unix的git bash下进行git操作啦0w0
+将公钥交给github！
+> ```shell
+> $ cat ~/.ssh/id_rsa.pub  
+> ```
+这样就能愉快的在g~~ay~~ithub里玩耍了！
+
+
+
+
 注意 这里如果是第一次提交，需要先设置本地仓库
 > ``` git bash
 > git remote add origin git@github.com/…blablabla
@@ -130,17 +146,8 @@
 > ```shell
 > git remote rm origin            
 > ```
-为了不每次都密码登陆，我们选择创建rsa密钥
-> ```shell
-> ssh-keygen -t rsa -C “your e-mail”
-> ```
-这样密钥和公钥就产生啦，默认的钥匙位置在~/.ssh
-上面这步windows用户可能会出错，文件目录的锅，所以推荐还是在类unix的git bash下进行git操作啦0w0
-将公钥交给github！
-> ```shell
-> cat ~/.ssh/id_rsa.pub  
-> ```
-这样就能愉快的在gayithub里玩耍了！
+
+
 从github服务器下载代码
 > ```shell
 > git  pull                                             

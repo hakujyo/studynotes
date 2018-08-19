@@ -25,12 +25,12 @@
 > $ vim readme.txt
 > ```
 
-### 将读我把添加到本地仓库
+### 将读我把添加到版本暂存区
 > ``` git bash
 > $ git add readme.txt
 > ```
 
-### 提交该版本
+### 一次性把暂存区的所有修改提交到分支
 > ``` git bash
 > $ git commit -m "wrote a readme file"
 > [master (root-commit) 8e09117] wrote a readme file

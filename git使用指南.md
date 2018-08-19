@@ -194,6 +194,11 @@
 > $ git branch -d [branchname]
 > ```
 
+对于没有被合并的分支，需要强制删除分支
+> ```shell
+> $ git branch -D [branchname]
+> ```
+
 查看分支合并情况
 > ```shell
 > $ git log --graph --pretty=oneline --abbrev-commit
@@ -224,19 +229,62 @@
 
 有多次stash的时候，就需要先git stash list查看，然后恢复指定工作区：
 > ```shell
-> git stash apply stash@{0}
+> $ git stash apply stash@{0}
 > ```
 
 
-小结
+## 小结
 > * 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
 > * 当手头工没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
 
-
-从github服务器下载代码
+# 多人协作
+查看远程库的信息
 > ```shell
-> git  pull                                             
+> $ git remote                                             
 > ```
-如果是多人协作写代码的话，上一步之前，要先pull别人的代码下来看
-但是又不想更改自己的代码，先 git stash存储一下
-git pull，然后再git stash pop，拿出来
+
+显示更详细的远程库信息
+> ```shell
+> $ git remote -v                                              
+> ```
+
+推送分支
+> ```shell
+> $ git push origin &lt;branch-name&gt;                                            
+> ```
+
+抓取分支
+> ```shell
+> $ git clone git@server-name:path/repo-name.git                                         
+> ```
+
+创建远程origin的dev分支到本地
+> ```shell
+> $ git checkout -b dev origin/dev                                        
+> ```
+
+如果没有指定本地dev分支与远程origin/dev分支的链接，要先设置dev和origin/dev的链接：
+> ```shell
+> $ git branch --set-upstream-to &lt;branch-name&gt;                                       
+> ```
+
+下拉远程库最新代码
+> ```shell
+> $ git pull                                       
+> ```
+   
+## 多人协作的工作模式通常是这样：
+> 1. 首先，可以试图用git push origin <branch-name>推送自己的修改；
+> 2. 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+> 3. 如果合并有冲突，则解决冲突，并在本地提交；
+> 4. 没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+> 5. 如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to &lt;branch-name&gt; origin/<branch-name>。
+
+## 小结
+> * 查看远程库信息，使用git remote -v；
+> * 本地新建的分支如果不推送到远程，对其他人就是不可见的；
+> * 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+> * 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+> * 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+> * 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+

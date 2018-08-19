@@ -127,7 +127,8 @@
 > ```
 这样密钥和公钥就产生啦，默认的钥匙位置在~/.ssh
 上面这步windows用户可能会出错，文件目录的锅，所以推荐还是在类unix的git bash下进行git操作啦0w0
-将公钥交给github！
+
+2. 将公钥交给github！
 > ```shell
 > $ cat ~/.ssh/id_rsa.pub  
 > ```

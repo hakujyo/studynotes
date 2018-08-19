@@ -1,5 +1,5 @@
-# 创建版本库
-## 创建一个空目录
+## 创建版本库
+### 创建一个空目录
 > ``` git bash
 > $ mkdir learngit
 > $ cd learngit
@@ -7,29 +7,30 @@
 > /d/learngit
 > ```
 
-## 把这个目录变成Git可以管理的仓库
+### 把这个目录变成Git可以管理的仓库
 > ``` git bash
 > $ git init 
 > Initialized empty Git repository in D:/learngit/.git/
 > ```
 
-## .git目录是Git来跟踪管理版本库的,不能随便修改删除
+### .git目录是Git来跟踪管理版本库的,不能随便修改删除
 > ``` git bash
 > $ ls -ah
 > ./  ../  .git/
 > ```
 
-## 写一个读我把：D
+## 提交版本
+### 写一个读我把：D
 > ``` git bash
 > $ vim readme.txt
 > ```
 
-## 将读我把添加到本地仓库
+### 将读我把添加到本地仓库
 > ``` git bash
 > $ git add readme.txt
 > ```
 
-## 提交该版本
+### 提交该版本
 > ``` git bash
 > $ git commit -m "wrote a readme file"
 > [master (root-commit) 8e09117] wrote a readme file
@@ -38,7 +39,7 @@
 > ```
 
 
-## 修改readme，查看状态，会提示把改动添加到版本库或者丢弃
+### 修改readme，查看状态，会提示把改动添加到版本库或者丢弃
 > ``` git bash
 > $ git status
 > On branch master
@@ -51,7 +52,7 @@
 > no changes added to commit (use "git add" and/or "git commit -a")
 > ```
 
-## 对比上一个版本修改的内容
+### 对比上一个版本修改的内容
 $ git diff readme.txt
 > ``` git bash
 > diff --git a/readme.txt b/readme.txt
@@ -66,7 +67,7 @@ $ git diff readme.txt
 
 
 
-## 上传到github服务器
+### 上传到github服务器
 > ``` git bash
 > git push -u origin master   
 > ```

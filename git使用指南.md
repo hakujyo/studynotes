@@ -11,37 +11,39 @@
 > ``` git bash
 > $ git init 
 > Initialized empty Git repository in D:/learngit/.git/
+> ```
+
+## .git目录是Git来跟踪管理版本库的,不能随便修改删除
+> ``` git bash
 > $ ls -ah
 > ./  ../  .git/
 > ```
 
-要使用git工具，首先你需要一个服务器，一般为github，我们在上面建一个仓库
-在本地建立git文件夹
-> ```shell
-> git init 
+## 写一个读我把：D
+> ``` git bash
+> $ vim readme.txt
 > ```
-检查有没有 .git文件夹 ，注意不要随意更改这个文件夹，里面存储着git版本信息
-> ```shell
-> ls -ah 
+
+## 将读我把添加到本地仓库
+> ``` git bash
+> $ git add readme.txt
 > ```
-写一个读我把：D
-> ```shell
-> vim readme.txt
+
+## 提交该版本
+> ``` git bash
+> $ git commit -m "wrote a readme file"
+> [master (root-commit) 8e09117] wrote a readme file
+>  1 file changed, 2 insertions(+)
+>  create mode 100644 readme.txt
 > ```
-将读我把添加到本地仓库
-> ```shell
-> git add readme.txt
-> ```
-提交该版本
-> ```shell
-> git commit -m “commit info”
-> ```
-上传到github服务器
-> ```shell
+
+## 上传到github服务器
+> ``` git bash
 > git push -u origin master   
 > ```
+
 注意 这里如果是第一次提交，需要先设置本地仓库
-> ```shell
+> ``` git bash
 > git remote add origin git@github.com/…blablabla
 > ```
 上一步要注意的是不要选择https方式上传代码

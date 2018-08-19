@@ -1,5 +1,5 @@
 # 创建版本库
-### 创建一个空目录
+创建一个空目录
 > ``` git bash
 > $ mkdir learngit
 > $ cd learngit
@@ -7,25 +7,25 @@
 > /d/learngit
 > ```
 
-### 把这个目录变成Git可以管理的仓库
+把这个目录变成Git可以管理的仓库
 > ``` git bash
 > $ git init 
 > Initialized empty Git repository in D:/learngit/.git/
 > ```
 
-### .git目录是Git来跟踪管理版本库的,不能随便修改删除
+.git目录是Git来跟踪管理版本库的,不能随便修改删除
 > ``` git bash
 > $ ls -ah
 > ./  ../  .git/
 > ```
 
 # 提交版本与版本回退
-### 将读我把添加到版本暂存区
+将读我把添加到版本暂存区
 > ``` git bash
 > $ git add readme.txt
 > ```
 
-### 一次性把暂存区的所有修改提交到分支
+ 一次性把暂存区的所有修改提交到分支
 > ``` git bash
 > $ git commit -m "wrote a readme file"
 > [master (root-commit) 8e09117] wrote a readme file
@@ -33,7 +33,7 @@
 >  create mode 100644 readme.txt
 > ```
 
-### 修改readme，查看状态，会提示把改动添加到版本库或者丢弃
+修改readme，查看状态，会提示把改动添加到版本库或者丢弃
 > ``` git bash
 > $ git status
 > On branch master
@@ -46,7 +46,7 @@
 > no changes added to commit (use "git add" and/or "git commit -a")
 > ```
 
-### 对比上一个版本修改的内容
+对比上一个版本修改的内容
 > ``` git bash
 > $ git diff readme.txt
 > diff --git a/readme.txt b/readme.txt
@@ -59,7 +59,7 @@
 >  Git is free software.
 > ```
 
-### 查看所有日志
+查看所有日志
 > ``` git bash
 > $ git log
 > commit 9e51fdd8c92aa09bf8a9eaed2479f61f7591da22
@@ -76,17 +76,17 @@
 > 
 > ```
 
-### 回退到上一个版本
+回退到上一个版本
 > ``` git bash
 > git reset --hard HEAD^
 > ```
 
-### 重置到任一版本
+重置到任一版本
 > ``` git bash
 > git reset --hard [commitid]
 > ```
 
-### 查看head指针历史记录
+查看head指针历史记录
 > ``` git bash
 > $ git reflog
 > 8e09117 HEAD@{0}: reset: moving to HEAD^
@@ -94,19 +94,25 @@
 > 8e09117 HEAD@{2}: commit (initial): wrote a readme file
 > ```
 
-### 用版本库里的版本替换工作区的版本
+用版本库里的版本替换工作区的版本
 > ``` git bash
 > $ git checkout -- [file]
 > ```
 
-### 让已经添加到暂存区的文件回到head指针指向的版本
+让已经添加到暂存区的文件回到head指针指向的版本
 > ``` git bash
 > $ git reset HEAD [file]
 > ```
 
-### 上传到github服务器
+上传到github服务器
 > ``` git bash
 > $ git push -u origin master   
+> ```
+
+从版本库中删除文件
+> ``` git bash
+> $ git rm &lt;file&gt;
+> $ git commit -m "remove file"
 > ```
 
 ## 小结
@@ -114,11 +120,6 @@
 > * 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &lt;file&gt;，就回到了场景1，第二步按场景1操作。
 > * 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，用命令git reset --hard HEAD^，不过前提是没有推送到远程库。
 
-### 从版本库中删除文件
-> ``` git bash
-> $ git rm &lt;file&gt;
-> $ git commit -m "remove file"
-> ```
 
 # 远程仓库
 ## 密钥

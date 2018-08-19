@@ -94,7 +94,7 @@
 > 8e09117 HEAD@{2}: commit (initial): wrote a readme file
 > ```
 
-### 让工作区文件回到最近一次git commit或git add时的状态
+### 用版本库里的版本替换工作区的版本
 > ``` git bash
 > $ git checkout -- [file]
 > ```
@@ -114,7 +114,11 @@
 > * 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &lt;file&gt;，就回到了场景1，第二步按场景1操作。
 > * 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，用命令git reset --hard HEAD^，不过前提是没有推送到远程库。
 
-
+### 从版本库中删除文件
+> ``` git bash
+> $ git rm &lt;file&gt;
+> $ git commit -m "remove file"
+> ```
 
 注意 这里如果是第一次提交，需要先设置本地仓库
 > ``` git bash

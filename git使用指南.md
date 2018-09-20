@@ -27,7 +27,7 @@
 
 将文件从暂存区删除
 > ``` git bash
-> $ git rm --cached conf/eip/config.localbox.ini
+> $ git rm --cached &lt;file&gt
 > ```
 
  一次性把暂存区的所有修改提交到分支

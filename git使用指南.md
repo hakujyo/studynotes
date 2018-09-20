@@ -27,7 +27,7 @@
 
 将文件从暂存区删除
 > ``` git bash
-> $ git rm --cached &lt;file&gt
+> $ git rm --cached [file]
 > ```
 
  一次性把暂存区的所有修改提交到分支

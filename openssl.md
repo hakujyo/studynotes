@@ -1,8 +1,8 @@
-# Prerequisite
+# 00 Prerequisite
 先理解数字证书，数字证书和CA的概念：
 http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html
 
-# 利用openssl做CA的证书（自签名），server及client的密钥和证书
+# Use openssl to make certificate of CA(sekf-signed)，key and certifecate of server&client
 ## Server
 > ```
 > openssl genrsa -des3 -out server.key 1024

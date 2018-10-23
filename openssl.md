@@ -1,4 +1,4 @@
-# 00 Prerequisite
+# Prerequisite
 先理解数字证书，数字证书和CA的概念：
 http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html
 

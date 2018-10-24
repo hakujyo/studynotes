@@ -39,5 +39,5 @@ http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html
 ## openssl命令
 ### 创建https连接
 > ```
-> openssl s_client -connect 10.107.231.193:443
+> openssl s_client -connect [ip]:[port]
 > ```

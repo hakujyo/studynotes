@@ -35,3 +35,9 @@ http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html
 > 2. touch demoCA/index.txt 
 > 3. touch demoCA/serial 
 > 4. echo 01 > demoCA/serial
+
+## openssl命令
+### 创建https连接
+> ```
+> openssl s_client -connect 10.107.231.193:443
+> ```

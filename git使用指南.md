@@ -1,5 +1,6 @@
 # 最佳实践
 > 我下面说的都是废话，找一个game玩玩把：D https://learngitbranching.js.org/
+> 上面介绍的这个游戏能让你学会大部分基本操作：clone/pull/push/fetch/merge/rebase/branch/checkout，就能在git世界里生存了！
 
 # 创建版本库
 创建一个空目录

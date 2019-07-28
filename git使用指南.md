@@ -1,3 +1,6 @@
+# 最佳实践
+> 我下面说的都是废话，找一个game玩玩把：D https://learngitbranching.js.org/
+
 # 创建版本库
 创建一个空目录
 > ``` git bash

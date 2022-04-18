@@ -45,7 +45,7 @@ export SSL=/home/blb/openssl
 setup.py 一定要改，主要是为了改 ssl 位置，否则会用系统默认的 ssl。
 Setup.dist 文件,参考
 https://stackoverflow.com/questions/32856389/how-to-import-ssl-in-python-2-7-6
-![image](https://github.com/hakujyo/studynotes/blob/master/pictures/Setup.dist.png)
+![image](https://github.com/hakujyo/studynotes/blob/master/pictures/Setup.dist.JPG)
 
 ## 执行 python 编译
 
@@ -61,7 +61,7 @@ make install
 
 切换账户
 直接 sudo su blb 切换，会发现编译好的 python 并没有生效：
-![image](https://github.com/hakujyo/studynotes/blob/master/pictures/python_error.png)
+![image](https://github.com/hakujyo/studynotes/blob/master/pictures/python_error.JPG)
 su - blb，否则不会加载.bash_profile 文件 #相关产物
 https://ylybucket.su.bcebos.com/tools%2Fsongjian.tar.gz
 直接 wget，按照上述步骤编译安装，可快速得到一个这样的 Python 2.7.16 +OpenSSL 1.1.1c 环境。

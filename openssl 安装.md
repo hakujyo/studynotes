@@ -45,7 +45,7 @@ export SSL=/home/blb/openssl
 setup.py 一定要改，主要是为了改 ssl 位置，否则会用系统默认的 ssl。
 Setup.dist 文件,参考
 https://stackoverflow.com/questions/32856389/how-to-import-ssl-in-python-2-7-6
-![image](https://github.com/hakujyo/studynotes/blob/master/pictures/Setup.dist.JPG)
+![image](https://github.com/hakujyo/studynotes/blob/master/pictures/Setup.dist.PNG)
 
 ## 执行 python 编译
 

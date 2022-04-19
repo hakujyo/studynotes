@@ -1,5 +1,5 @@
 <table>
-    <tr>
+    <tr style="vertical-align:middle; text-align:center;">
         <th>作用</th>
         <th>操作</th>
     </tr>
@@ -27,7 +27,7 @@
     </tr>
     <tr>
         <td>对比表结构差异</td>
-        <td>安装：<br>
+        <td><b>安装：</b><br>
             wget https://ylybucket.su.bcebos.com/tools%2Fmysql-utilities-1.6.5.tar.gz<br>
             tar -zxvf mysql-utilities-1.6.5.tar.gz<br>
             cd mysql-utilities-1.6.5<br>
@@ -36,14 +36,14 @@
             mysqldiff --version<br>
             mysql-connector-python 安装<br>
             下载地址：https://dev.mysql.com/downloads/connector/python/<br>
-            mysql-utilities 安装<br>
+            <b>mysql-utilities 安装</b><br>
             下载地址：http://downloads.mysql.com/archives/utilities/
             mysqldiff --server1=root:password@127.0.0.1:3306 --server2=root:password@127.0.0.1:3306 --force --difftype=sql db1:db2<br>
             安装以后执行查看版本命令，如果能显示版本表示安装成功<br>
             mysqldiff --version<br>
             MySQL Utilities mysqldiff version 1.6.5<br>
             License type: GPLv2<br>
-            mysqldiff 使用方法<br>
+            <b>mysqldiff 使用方法</b><br>
             命令：<br>
             mysqldiff --server1=root:password@host1:port --server2=root:password@host2:port --force --difftype=sql db1(.table1):db2(.table3)<br>
             参考：https://blog.csdn.net/fdipzone/article/details/78884518<br>

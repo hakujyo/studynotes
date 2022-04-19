@@ -1,6 +1,6 @@
 <table>
     <tr style="vertical-align:middle; text-align:left;word-break:keep-all">
-        <th wide=100%>作用</th>
+        <th tyle="ertical-align:middle; text-align:left;word-break:keep-all;wide=100%">作用</th>
         <th>操作</th>
     </tr>
     <tr>

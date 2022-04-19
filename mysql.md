@@ -1,5 +1,5 @@
 <table>
-    <tr style="vertical-align:middle; text-align:center;word-break:keep-all">
+    <tr style="vertical-align:middle; text-align:left;word-break:keep-all">
         <th wide=100%>作用</th>
         <th>操作</th>
     </tr>

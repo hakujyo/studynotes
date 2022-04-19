@@ -1,6 +1,6 @@
 <table>
-    <tr style="vertical-align:middle; text-align:left;word-break:keep-all">
-        <th tyle="ertical-align:middle; text-align:left;word-break:keep-all;wide=100%">作用</th>
+    <tr>
+        <th>作用</th>
         <th>操作</th>
     </tr>
     <tr>
@@ -63,3 +63,12 @@
             alter table elb_cert change column id id int(11) not null default null auto_increment; 
         </td>
     </tr>
+
+<style>
+td, th{
+    vertical-align: middle; 
+    text-align: left;
+    word-break: keep-all;
+    width: 100%
+}
+</style>

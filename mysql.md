@@ -1,11 +1,11 @@
-<style>
-td, th{
-    vertical-align: middle; 
+<!-- <style>
+td, th {
+    vertical-align: middle;
     text-align: left;
     word-break: keep-all;
     width: 100%
 }
-</style>
+</style> -->
 
 <table>
     <tr>

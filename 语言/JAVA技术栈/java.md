@@ -7,6 +7,7 @@
 -   gradle 编译 project
 
     ![image](https://github.com/hakujyo/studynotes/blob/master/pictures/idea_gradle.png)
+
     右上角
 
     terminal：gradle clean idea

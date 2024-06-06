@@ -122,3 +122,16 @@ pip install -r requirements.txt
 ```bash
 pip install --no-index --find-links=packages/ -r requirements.txt
 ```
+
+# poetry
+## 常用命令
+```bash
+# 根据pyproject.toml生成poetry.lock
+poetry lock
+# 根据poetry.lock安装/升级依赖
+poetry install
+poetry update
+# 根据poetry.lock生成requirements.txt
+poetry export -f requirements.txt --without-hashes > requirements.txt
+```
+

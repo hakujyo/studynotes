@@ -29,3 +29,11 @@ git pull
 ### git upstream和origin的区别
 https://blog.csdn.net/weixin_37646636/article/details/129778632
 upstream是开源仓库，origin是你的仓库下fork开源仓库的远端仓库，local是你本地的仓库
+
+### 基于upstream只提交一个commit的方法
+https://www.cnblogs.com/xuejianbest/p/10285278.html
+比如你开发过程中，upstream已经被别人pull request了，这样你本地分支commit就会落后于upstream。
+```
+git fetch upstream [branch]
+git rebase upstream/[branch]
+```

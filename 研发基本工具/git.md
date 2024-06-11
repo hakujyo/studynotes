@@ -25,3 +25,7 @@ git stash pop
 git reset --hard
 git pull
 ```
+
+### git upstream和origin的区别
+https://blog.csdn.net/weixin_37646636/article/details/129778632
+upstream是开源仓库，origin是你的仓库下fork开源仓库的远端仓库，local是你本地的仓库

@@ -8,5 +8,6 @@ https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebr
 ```
 验证kubectl 集群配置
 ``` bash
+minikube start
 kubectl cluster-info
 ```

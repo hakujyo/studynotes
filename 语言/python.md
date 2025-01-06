@@ -13,7 +13,7 @@ pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple
 使用 pip 时，用 python[ver] -m [...] 区分 python2 和 3，例如：
 
 ```bash
-python3 -m pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple
+python3 -m pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn
 ```
 
 # python 支持 openssl 指定版本
